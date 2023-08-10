@@ -1,5 +1,5 @@
 function newPlayableCharacter(xPos,yPos){
-    const element = newimage('assets/static.gif')
+    const element = newimage('assets/PC.gif')
 
         let target = null
         document.addEventListener('leftClick',target = mousePos)
@@ -21,7 +21,7 @@ function newPlayableCharacter(xPos,yPos){
             }
 
             element.style.left = xPos + 'px'
-            element.style.left = ypos + 'px'
+            element.style.left = yPos + 'px'
         
             console.log(xPos,yPos)
     }

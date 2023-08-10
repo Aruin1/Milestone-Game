@@ -12,3 +12,4 @@ if(playArea)
 
 
 const pc = newPlayableCharacter(100,100)
+const target = newNonPlayableCharacter(500,500)

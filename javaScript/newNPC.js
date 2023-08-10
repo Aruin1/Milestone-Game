@@ -1,9 +1,7 @@
-const newNPC = new class {
-    constructor() {
-        //todo: creatre point to point move function
+function newNonPlayableCharacter(xPos,yPos){
+    const element = newimage('assets/NPC.gif')
 
-        //todo: create behavior method using switch statement
-
-        
-    }
-}
+    element.style.left = xPos + 'px'
+    element.style.left = yPos + 'px'
+    return element
+ }
