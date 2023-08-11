@@ -16,6 +16,23 @@
 
 // End of WIP
 
+function createNPC(name,xCords,yCords,url,isTarget,home) {
+  const image = document.createElement('img')
+  image.src = url
+  image.style.position = 'absolute'
+  image.style.left = xCords + 'px'
+  image.style.top = yCords + 'px'
+  image.style.opacity = '0'
+  document.body.append(image)
+  home.push(image)
+
+  return{
+      image: image,
+      isTarget: isTarget,
+      name: name,
+  }
+}
+
 const NPCs = []
 
 const playerCharacter = document.createElement('img')
@@ -25,16 +42,11 @@ playerCharacter.style.left = '850px'
 playerCharacter.style.top = '400px'
 document.body.append(playerCharacter)
 
-//temp npc create replace with object class/ function later
-const exampleNPC = document.createElement('img')
-exampleNPC.src = 'assests/NPC.gif'
-exampleNPC.style.position = 'absolute'
-exampleNPC.style.left = '400px'
-exampleNPC.style.top = '400px'
-exampleNPC.style.opacity = '0'
-document.body.append(exampleNPC)
 
-NPCs.push(exampleNPC)
+
+const newNPC = createNPC('NPC1',400,400,'assests/NPC.gif',true,NPCs)
+
+console.log(NPCs)
 
 const pingButton = document.getElementById('ping-button')
 

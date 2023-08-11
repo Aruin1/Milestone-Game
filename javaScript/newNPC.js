@@ -1,7 +1,16 @@
-function newNonPlayableCharacter(xPos,yPos){
-    const element = newimage('assets/NPC.gif')
+function createNPC(name,xCords,yCords,url,isTarget,home) {
+    const image = document.createElement('img')
+    image.src = url
+    image.style.position = 'absolute'
+    image.style.left = xCords + 'px'
+    image.style.top = yCords + 'px'
+    image.style.opacity = '0'
+    document.body.append(image)
+    home.push(image)
 
-    element.style.left = xPos + 'px'
-    element.style.left = yPos + 'px'
-    return element
- }
+    return{
+        image: image,
+        isTarget: isTarget,
+        name: name,
+    }
+}
