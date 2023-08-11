@@ -36,22 +36,8 @@ document.body.append(exampleNPC)
 
 NPCs.push(exampleNPC)
 
-function ping (targets){
-  //set opasity to 1 for all array objects
-  for (let index = 0; index < NPCs.length; index++) {
-    const element = NPCs[index];
+const pingButton = document.getElementById('ping-button')
 
-    element.style.opacity = '1'
-    }
-  //wait an amout of time
-  setTimeout(() => {
-    for (let index = 0; index < NPCs.length; index++) {
-      const element = NPCs[index];
+pingButton.addEventListener('click',() => ping(NPCs))
 
-      element.style.opacity = '0'
-    }
-  }, 1500)
-  //set all object back to opacity 0
-}
 
-ping()
