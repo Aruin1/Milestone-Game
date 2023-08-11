@@ -1,9 +1,9 @@
 function newPlayableCharacter(xPos,yPos){
-    const element = newimage('assets/PC.gif')
+    const element = newImage('assests/PC.gif')
 
-        let target = null
-        document.addEventListener('leftClick',target = mousePos)
-    function moveCharacter(){
+        //let target = null
+        //document.addEventListener('leftClick',target = mousePos)
+        /*function moveCharacter(){
         
             let run = target.x - xPos
             let rise = target.y - yPos
@@ -23,10 +23,10 @@ function newPlayableCharacter(xPos,yPos){
             element.style.left = xPos + 'px'
             element.style.left = yPos + 'px'
         
-            console.log(xPos,yPos)
+            //console.log(target)
     }
 
-    setInterval(moveCharacter,10)
+    setInterval(moveCharacter,10)*/
 
     
  }
