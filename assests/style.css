@@ -4,7 +4,11 @@
     
 }
 
-body{
+header{
+    text-align: center;
+}
+
+#container{
     display: flex;
 }
 
@@ -14,8 +18,12 @@ div{
     border-style: solid;
 }
 
-#play-area{
+main{
     width: 1500px;
     height: 800px;
+
+    border: 5px;
+    border-color: green;
+    border-style: solid;
 }
 
