@@ -60,7 +60,7 @@ document.body.append(playerCharacter)
 
 
 
-const newNPC = createNPC('NPC1',400,400,'assests/NPC.gif',false)
+const newNPC = createNPC('NPC1',400,400,'assests/squareNPC.png',false)
 
 const NPCs = [newNPC]
 
