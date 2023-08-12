@@ -31,3 +31,5 @@ ______________________________________________________________
 ______________________________________________________________
 
 Adendum: Due to outside factors the timeline and resources the scope of this project was cut back significantly.
+
+Adendum2: Was unable to solve the file issue resulting in many functions have to remain inside index.js

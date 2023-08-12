@@ -52,7 +52,7 @@ function addKill(NPCs) {
 
 
 const playerCharacter = document.createElement('img')
-playerCharacter.src = "assests/PC.gif"
+playerCharacter.src = "assests/player.png"
 playerCharacter.style.position = 'absolute'
 playerCharacter.style.left = '850px'
 playerCharacter.style.top = '400px'
@@ -60,9 +60,13 @@ document.body.append(playerCharacter)
 
 
 
-const newNPC = createNPC('NPC1',400,400,'assests/squareNPC.png',false)
+const NPC1 = createNPC('NPC1',1400,700,'assests/triangleNPC.png',true)
+const NPC2 = createNPC('NPC1',400,400,'assests/triangleNPC.png',false)
+const NPC3 = createNPC('NPC1',1500,300,'assests/septagonNPC.png',false)
+const NPC4 = createNPC('NPC1',300,800,'assests/squareNPC.png',false)
+const NPC5 = createNPC('NPC1',1400,800,'assests/squareNPC.png',false)
 
-const NPCs = [newNPC]
+const NPCs = [NPC1,NPC2,NPC3,NPC4,NPC5]
 
 addKill(NPCs)
 
