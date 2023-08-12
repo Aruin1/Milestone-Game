@@ -3,14 +3,14 @@ function ping (target){
     for (let index = 0; index < target.length; index++) {
       const element = target[index];
   
-      element.style.opacity = '1'
+      element.image.style.opacity = '1'
       }
     //wait an amout of time
     setTimeout(() => {
       for (let index = 0; index < target.length; index++) {
         const element = target[index];
   
-        element.style.opacity = '0'
+        element.image.style.opacity = '0'
       }
     }, 1500)
     //set all object back to opacity 0

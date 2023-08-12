@@ -16,6 +16,7 @@
 
 // End of WIP
 
+
 function createNPC(name,xCords,yCords,url,isTarget,home) {
   const image = document.createElement('img')
   image.src = url
@@ -24,7 +25,6 @@ function createNPC(name,xCords,yCords,url,isTarget,home) {
   image.style.top = yCords + 'px'
   image.style.opacity = '0'
   document.body.append(image)
-  home.push(image)
 
   return{
       image: image,
@@ -33,7 +33,23 @@ function createNPC(name,xCords,yCords,url,isTarget,home) {
   }
 }
 
-const NPCs = []
+function kill(NPC) {
+  if(NPC.isTarget) {
+      alert('target elimnated good job')
+  }else{
+      alert('non target eliminated better luck next time.')
+  }
+}
+
+function addKill(NPCs) {
+  for (let index = 0; index < NPCs.length; index++) {
+    const element = NPCs[index];
+    
+    element.image.addEventListener('click',() => kill(element))
+  }
+}
+
+
 
 const playerCharacter = document.createElement('img')
 playerCharacter.src = "assests/PC.gif"
@@ -44,9 +60,13 @@ document.body.append(playerCharacter)
 
 
 
-const newNPC = createNPC('NPC1',400,400,'assests/NPC.gif',true,NPCs)
+const newNPC = createNPC('NPC1',400,400,'assests/NPC.gif',true)
 
-console.log(NPCs)
+const NPCs = [newNPC]
+
+addKill(NPCs)
+
+//newNPC.image.addEventListener('click',() => kill(newNPC))
 
 const pingButton = document.getElementById('ping-button')
 
